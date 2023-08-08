@@ -20,7 +20,8 @@
         return (position.y -= 1);
         break;
       default:
-        throw new Error('unknown direction');
+        const invalid: never = direction;
+        throw new Error('unknown direction' + invalid);
     }
   }
 
